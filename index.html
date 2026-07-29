@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerCrafter : Resume Builder and analyser And Job Seeker </title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    
+    <header>
+        <div class="logo">
+            <img src="images/career-crafter-logo.png" alt="Career Crafter Logo" class="logo-image">
+            <span>CAREER<strong>CRAFTER</strong></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="features page.html">Features</a></li>
+                <li><a href="template-details.html">Templates</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login-btn" onclick="showAuthModal('login')">SIGN IN</button>
+            <button class="signup-btn" onclick="showAuthModal('signup')">SIGN UP</button>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>AI-Powered Resume Builder, Analyze and Find Jobs</h1>
+                <p>Create professional resumes in minutes with AI assistance. Stand out from the crowd with intelligent content generation.</p>
+                <div class="hero-buttons">
+                    <button class="cta-button" onclick="showResumeBuilder()">Start Building Free</button>
+                    <button class="demo-button" onclick="showDemo()">Watch Demo</button>
+                    <button class="qr-demo-button" onclick="window.location.href='qr-demo.html'">
+                        <i class="fas fa-qrcode"></i>
+                        QR Code Demo
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Resumes Created</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">AI Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-graphic">
+                <div class="floating-element elem1"></div>
+                <div class="floating-element elem2"></div>
+                <div class="floating-element elem3"></div>
+                <div class="floating-element elem4"></div>
+                <div class="resume-preview">
+                    <div class="resume-mockup">
+                        <div class="resume-header"></div>
+                        <div class="resume-line"></div>
+                        <div class="resume-line short"></div>
+                        <div class="resume-line"></div>
+                        <div class="resume-section"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Highlight Section -->
+        <section class="featured-highlight">
+            <div class="highlight-container">
+                <div class="highlight-content">
+                    <div class="highlight-badge">
+                        <i class="fas fa-star"></i>
+                        <span>NEW FEATURE</span>
+                    </div>
+                    <h2>QR Code Resume Generator</h2>
+                    <p>Share your resume instantly with QR codes. Perfect for networking events, business cards, and modern professional interactions.</p>
+                    <div class="highlight-features">
+                        <div class="highlight-feature">
+                            <i class="fas fa-share-alt"></i>
+                            <span>Instant Sharing</span>
+                        </div>
+                        <div class="highlight-feature">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Track Engagement</span>
+                        </div>
+                        <div class="highlight-feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile Friendly</span>
+                        </div>
+                    </div>
+                    <div class="highlight-actions">
+                        <a href="qr-demo.html" class="highlight-btn primary">
+                            <i class="fas fa-play"></i>
+                            Try QR Demo
+                        </a>
+                        <a href="feature-details.html?feature=qr-code-generator" class="highlight-btn secondary">
+                            <i class="fas fa-info-circle"></i>
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="highlight-visual">
+                    <div class="qr-preview-container">
+                        <div class="qr-code-sample">
+                            <div class="qr-pattern">
+                                <div class="qr-corner top-left"></div>
+                                <div class="qr-corner top-right"></div>
+                                <div class="qr-corner bottom-left"></div>
+                                <div class="qr-dots">
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                    <div class="qr-dot"></div>
+                                </div>
+                                <div class="qr-center-logo">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scan-animation">
+                            <div class="phone-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="scan-waves">
+                                <div class="wave"></div>
+                                <div class="wave"></div>
+                                <div class="wave"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="section-header">
+                <h2>Powerful AI Features</h2>
+                <p>Everything you need to create the perfect resume</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Content Generation</h3>
+                    <p>Generate compelling resume content based on your job description and industry</p>
+                    <div class="feature-card-overlay">
+                        <div class="feature-actions">
+                            <button class="feature-action-btn primary" onclick="event.stopPropagation(); window.location.href='feature-demo.html?feature=ai-content'">
+                                <i class="fas fa-play"></i>
+                                Try Demo
+                            </button>
+                            <button class="feature-action-btn secondary" onclick="event.stopPropagation(); openFeatureDetails('ai-content')">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Smart Suggestions</h3>
+                    <p>Get AI-powered recommendations to improve your existing resume content</p>
+                    <div class="feature-card-overlay">
+                        <div class="feature-actions">
+                            <button class="feature-action-btn primary" onclick="event.stopPropagation(); window.location.href='feature-demo.html?feature=smart-suggestions'">
+                                <i class="fas fa-play"></i>
+                                Try Demo
+                            </button>
+                            <button class="feature-action-btn secondary" onclick="event.stopPropagation(); openFeatureDetails('smart-suggestions')">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Multiple Templates</h3>
+                    <p>Choose from professional templates designed for different industries</p>
+                    <div class="feature-card-overlay">
+                        <div class="feature-actions">
+                            <button class="feature-action-btn primary" onclick="event.stopPropagation(); window.location.href='feature-demo.html?feature=templates'">
+                                <i class="fas fa-play"></i>
+                                Try Demo
+                            </button>
+                            <button class="feature-action-btn secondary" onclick="event.stopPropagation(); openFeatureDetails('templates')">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Skill Recommendations</h3>
+                    <p>AI suggests relevant skills based on your industry and experience</p>
+                    <div class="feature-card-overlay">
+                        <div class="feature-actions">
+                            <button class="feature-action-btn primary" onclick="event.stopPropagation(); window.location.href='feature-demo.html?feature=skill-recommendations'">
+                                <i class="fas fa-play"></i>
+                                Try Demo
+                            </button>
+                            <button class="feature-action-btn secondary" onclick="event.stopPropagation(); openFeatureDetails('skill-recommendations')">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Multiple Formats</h3>
+                    <p>Export your resume in PDF, Word, or share with a custom link</p>
+                    <div class="feature-card-overlay">
+                        <div class="feature-actions">
+                            <button class="feature-action-btn primary" onclick="event.stopPropagation(); window.location.href='feature-demo.html?feature=export-formats'">
+                                <i class="fas fa-play"></i>
+                                Try Demo
+                            </button>
+                            <button class="feature-action-btn secondary" onclick="event.stopPropagation(); openFeatureDetails('export-formats')">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>ATS Optimized</h3>
+                    <p>Ensure your resume passes Applicant Tracking Systems</p>
+                    <div class="feature-card-overlay">
+                        <div class="feature-actions">
+                            <button class="feature-action-btn primary" onclick="event.stopPropagation(); window.location.href='feature-demo.html?feature=ats-optimization'">
+                                <i class="fas fa-play"></i>
+                                Try Demo
+                            </button>
+                            <button class="feature-action-btn secondary" onclick="event.stopPropagation(); openFeatureDetails('ats-optimization')">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card new-feature" id="dynamicFeature" onclick="openFeatureDetails('realtime-feedback')">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Real-time Resume Feedback</h3>
+                    <p>Receive instant AI-powered feedback as you build your resume</p>
+                    <div class="feature-card-overlay">
+                        <div class="feature-actions">
+                            <button class="feature-action-btn primary" onclick="event.stopPropagation(); window.location.href='feature-demo.html?feature=realtime-feedback'">
+                                <i class="fas fa-play"></i>
+                                Try Demo
+                            </button>
+                            <button class="feature-action-btn secondary" onclick="event.stopPropagation(); openFeatureDetails('realtime-feedback')">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card new-feature" onclick="openFeatureDetails('mock-interview')">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Mock Interview Generator</h3>
+                    <p>Practice with AI-generated mock interview questions based on your resume and job role.</p>
+                    <div class="feature-card-overlay">
+                         <div class="feature-actions">
+                            <button class="feature-action-btn primary" onclick="event.stopPropagation(); window.location.href='feature-demo.html?feature=mock-interview'">
+                                <i class="fas fa-play"></i>
+                                Try Demo
+                            </button>
+                            <button class="feature-action-btn secondary" onclick="event.stopPropagation(); openFeatureDetails('mock-interview')">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card new-feature" onclick="openFeatureDetails('cover-letter-assistant')">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Built-in Cover Letter Assistant</h3>
+                    <p>Create compelling cover letters that complement your resume perfectly</p>
+                    <div class="feature-card-overlay">
+                         <div class="feature-actions">
+                            <button class="feature-action-btn primary" onclick="event.stopPropagation(); window.location.href='feature-demo.html?feature=cover-letter'">
+                                <i class="fas fa-play"></i>
+                                Try Demo
+                            </button>
+                            <button class="feature-action-btn secondary" onclick="event.stopPropagation(); openFeatureDetails('cover-letter-assistant')">
+                                <i class="fas fa-info-circle"></i>
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="templates" class="templates">
+            <div class="section-header">
+              <a href="template-details.html">  <h2>Professional Templates</h2> <a>
+                <p>Choose from our collection of industry-specific templates</p>
+            </div>
+            <div class="templates-grid">
+                <div class="template-card" data-template="modern" onclick="openTemplateDetails('modern')">
+                    <div class="template-preview">
+                        <div class="template-mockup modern"></div>
+                    </div>
+                    <h4>Modern Professional</h4>
+                    <p>Perfect for tech and creative industries</p>
+                    <div class="template-card-overlay">
+                        <i class="fas fa-eye"></i>
+                        <span>View Details</span>
+                    </div>
+                </div>
+                <div class="template-card" data-template="classic" onclick="openTemplateDetails('classic')">
+                    <div class="template-preview">
+                        <div class="template-mockup classic"></div>
+                    </div>
+                    <h4>Classic Executive</h4>
+                    <p>Ideal for corporate and finance roles</p>
+                    <div class="template-card-overlay">
+                        <i class="fas fa-eye"></i>
+                        <span>View Details</span>
+                    </div>
+                </div>
+                <div class="template-card" data-template="creative" onclick="openTemplateDetails('creative')">
+                    <div class="template-preview">
+                        <div class="template-mockup creative"></div>
+                    </div>
+                    <h4>Creative Portfolio</h4>
+                    <p>Great for designers and artists</p>
+                    <div class="template-card-overlay">
+                        <i class="fas fa-eye"></i>
+                        <span>View Details</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="section-header">
+                <h2>Choose Your Plan</h2>
+                <p>Start free, upgrade when you need more features</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="price">₹0<span>/month</span></div>
+                    <ul>
+                        <li>1 Resume</li>
+                        <li>Basic Templates</li>
+                        <li>PDF Download</li>
+                        <li>Basic AI Suggestions</li>
+                    </ul>
+                    <button class="pricing-btn">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Pro</h3>
+                    <div class="price">₹499<span>/month</span></div>
+                    <ul>
+                        <li>Unlimited Resumes</li>
+                        <li>All Templates</li>
+                        <li>All Export Formats</li>
+                        <li>Advanced AI Features</li>
+                        <li>Cover Letter Generator</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <button class="pricing-btn">Start Pro Trial</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">₹999<span>/month</span></div>
+                    <ul>
+                        <li>Everything in Pro</li>
+                        <li>Team Collaboration</li>
+                        <li>Custom Branding</li>
+                        <li>API Access</li>
+                        <li>Dedicated Support</li>
+                    </ul>
+                    <button class="pricing-btn">Contact Sales</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Authentication Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <div id="loginForm" class="auth-form">
+                <div class="auth-graphics">
+                    <div class="auth-shape shape-1"></div>
+                    <div class="auth-shape shape-2"></div>
+                    <div class="auth-shape shape-3"></div>
+                    <div class="auth-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+                <h2>Welcome Back</h2>
+                <form onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <i class="fas fa-envelope form-icon"></i>
+                        <input type="email" id="loginEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock form-icon"></i>
+                        <input type="password" id="loginPassword" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="auth-submit-btn">Login</button>
+                </form>
+                <div class="auth-divider">
+                    <span>or continue with</span>
+                </div>
+                <div class="social-auth">
+                    <button class="social-btn google" onclick="loginWithGoogle()">
+                        <i class="fab fa-google"></i> Google
+                    </button>
+                    <button class="social-btn github" onclick="loginWithGitHub()">
+                        <i class="fab fa-github"></i> GitHub
+                    </button>
+                </div>
+                <p class="auth-switch">Don't have an account? <a href="#" onclick="switchToSignup()">Sign up</a></p>
+            </div>
+            
+            <div id="signupForm" class="auth-form" style="display: none;">
+                <div class="auth-graphics">
+                    <div class="auth-shape shape-1"></div>
+                    <div class="auth-shape shape-2"></div>
+                    <div class="auth-shape shape-3"></div>
+                    <div class="auth-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                </div>
+                <h2>Create Account</h2>
+                <form onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <i class="fas fa-user form-icon"></i>
+                        <input type="text" id="signupName" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-envelope form-icon"></i>
+                        <input type="email" id="signupEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-lock form-icon"></i>
+                        <input type="password" id="signupPassword" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-shield-alt form-icon"></i>
+                        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit" class="auth-submit-btn">Create Account</button>
+                </form>
+                <div class="auth-divider">
+                    <span>or continue with</span>
+                </div>
+                <div class="social-auth">
+                    <button class="social-btn google" onclick="signupWithGoogle()">
+                        <i class="fab fa-google"></i> Google
+                    </button>
+                    <button class="social-btn github" onclick="signupWithGitHub()">
+                        <i class="fab fa-github"></i> GitHub
+                    </button>
+                </div>
+                <p class="auth-switch">Already have an account? <a href="#" onclick="switchToLogin()">Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Builder Modal -->
+    <div id="resumeBuilderModal" class="modal">
+        <div class="modal-content resume-builder">
+            <span class="close" onclick="closeResumeBuilder()">&times;</span>
+            <div class="resume-builder-container">
+                <div class="resume-form">
+                    <h2>Build Your Resume</h2>
+                    <div class="form-tabs">
+                        <button class="tab-btn active" onclick="showTab('personal')">Personal Info</button>
+                        <button class="tab-btn" onclick="showTab('experience')">Experience</button>
+                        <button class="tab-btn" onclick="showTab('education')">Education</button>
+                        <button class="tab-btn" onclick="showTab('skills')">Skills</button>
+                        <button class="tab-btn" onclick="showTab('additional')">Additional</button>
+                    </div>
+                    
+                    <div id="personalTab" class="tab-content active">
+                        <h3>Personal Information</h3>
+                        <div class="form-row">
+                            <input type="text" id="fullName" placeholder="Full Name">
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-row">
+                            <input type="tel" id="phone" placeholder="Phone">
+                            <input type="text" id="location" placeholder="Location">
+                        </div>
+                        <textarea id="summary" placeholder="Professional Summary (AI will help enhance this)"></textarea>
+                        <button class="ai-btn" onclick="generateSummary()">
+                            <i class="fas fa-magic"></i> Generate with AI
+                        </button>
+                    </div>
+                    
+                    <div id="experienceTab" class="tab-content">
+                        <h3>Work Experience</h3>
+                        <div id="experienceList"></div>
+                        <button class="add-btn" onclick="addExperience()">+ Add Experience</button>
+                        <button class="ai-btn" onclick="enhanceExperience()">
+                            <i class="fas fa-robot"></i> Enhance with AI
+                        </button>
+                    </div>
+                    
+                    <div id="educationTab" class="tab-content">
+                        <h3>Education</h3>
+                        <div id="educationList"></div>
+                        <button class="add-btn" onclick="addEducation()">+ Add Education</button>
+                    </div>
+                    
+                    <div id="skillsTab" class="tab-content">
+                        <h3>Skills</h3>
+                        <div class="skills-input">
+                            <input type="text" id="skillInput" placeholder="Add a skill">
+                            <button onclick="addSkill()">Add</button>
+                        </div>
+                        <div id="skillsList"></div>
+                        <button class="ai-btn" onclick="suggestSkills()">
+                            <i class="fas fa-lightbulb"></i> AI Skill Suggestions
+                        </button>
+                    </div>
+                    
+                    <div id="additionalTab" class="tab-content">
+                        <h3>Additional Sections</h3>
+                        <div class="additional-sections">
+                            <div class="section-toggle">
+                                <input type="checkbox" id="projectsToggle" onchange="toggleSection('projects')">
+                                <label for="projectsToggle">Projects</label>
+                            </div>
+                            <div class="section-toggle">
+                                <input type="checkbox" id="certificationsToggle" onchange="toggleSection('certifications')">
+                                <label for="certificationsToggle">Certifications</label>
+                            </div>
+                            <div class="section-toggle">
+                                <input type="checkbox" id="languagesToggle" onchange="toggleSection('languages')">
+                                <label for="languagesToggle">Languages</label>
+                            </div>
+                            <div class="section-toggle">
+                                <input type="checkbox" id="achievementsToggle" onchange="toggleSection('achievements')">
+                                <label for="achievementsToggle">Achievements</label>
+                            </div>
+                        </div>
+                        <div id="additionalContent"></div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button class="preview-btn" onclick="previewResume()">Preview</button>
+                        <button class="save-btn" onclick="saveResume()">Save</button>
+                        <button class="download-btn" onclick="downloadResume()">Download PDF</button>
+                    </div>
+                </div>
+                
+                <div class="resume-preview-panel">
+                    <h3>Live Preview</h3>
+                    <div id="resumePreview" class="resume-preview-content">
+                        <!-- Resume preview will be generated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>AI Resume Builder</h4>
+                <p>Empowering professionals with AI-powered resume creation tools for career success.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: support@airesume.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="#features">All Features</a>
+                    <a href="qr-demo.html">
+                        <i class="fas fa-qrcode"></i>
+                        QR Code Demo
+                    </a>
+                    <a href="feature-details.html?feature=qr-code-generator">QR Generator Details</a>
+                    <a href="test-features.html">Test Features</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AI Resume Builder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/resume-builder.js"></script>
+    <script src="js/ai-integration.js"></script>
+</body>
+</html>
